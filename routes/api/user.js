@@ -44,7 +44,8 @@ router.get('/:id', function(req, res) {
 // Create a user
 router.post('/', function(req, res) {
   //debug('POST' +  req.path + ',' + req.body)
-  var values = snakeProps(req.body)
+  var values = changeCase(req.body)
+
 
   db.insert('user', values, function(error, id) {
     if (error) {

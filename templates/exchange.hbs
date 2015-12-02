@@ -1,0 +1,75 @@
+<div>
+	<div class="main">
+		<h1 class="schedule-head">Schedule an Eggschange</h1>
+		<div class="confirmed">Thank you, your schedule has been accepted.</div>
+			<ul class="tabs">
+				<li class="active"><a href="#exchange"class="buyer-tab">Buyer</a></li>
+				<li class=""><a href="#exchange" class="seller-tab">Seller</a></li>
+			</ul>
+			<div id="buyer" class="tab-content-show">
+				<p>If you are a buyer, please use this form. You will order the eggs by the dozen. The price per dozen is $4.00.</p>
+				<form action="/api/schedule" method="POST" class="exchange-form">
+					<label for="buyer-location" class="tabbed-select">Please choose a location: </label>
+						<select name="location_id" id="buyer-location" class="location_id" required>
+							 {{#each this}}
+							 	<option value="{{id}}">{{name}}</option>
+							 {{/each}}
+						</select><br>
+					<label for="buyer-eggs" class="tabbed-select">Number of Dozen: </label>
+					<select name="egg_number" id="buyer-eggs" class="egg_number" required>
+						<option value="12" selected>1</option>
+						<option value="24">2</option>
+						<option value="36">3</option>
+						<option value="48">4</option>
+						<option value="60">5</option>
+						<option value="72">6</option>
+					</select><br>
+					<input type="checkbox" id="agree-box" class="agree-box" required>
+					<span>By checking this box, I agree to honor my commitment to purchase the above amount of eggs at the selected location for the amount of $4.00 per dozen. If I cannot honor my commitment, I will contact Eggschange Co-op ASAP. I understand that failing to honor my commitments could terminate my eligibility to participate in this program.</label><br>
+					<button class="exchange">Schedule</button>
+				</form>
+			</div>
+			<div id="seller" class="tab-content-hide">
+				<p>If you are a seller, please use this form. You will select the number of dozens you will supply to a location. The sellers will receive $4.00 for each dozen sold. Eggschange Co-op will be compensated at a rate of $.50 for each dozen sold for management of the co-op.</p>
+				<form action="/api/schedule" method="POST" class="exchange-form">
+					<label for="seller-location" class="tabbed-select">Please choose a location: </label>
+						<select name="location_id" id="seller-location" class="location_id" required>
+							 {{#each this}}
+							 	<option value="{{id}}">{{name}}</option>
+							 {{/each}}
+						</select><br>
+					<label for="seller-eggs" class="tabbed-select">Number of Dozen: </label>
+					<select name="egg_number" id="seller-eggs" class="egg_number" required>
+						<option value="12" selected>1</option>
+						<option value="24">2</option>
+						<option value="36">3</option>
+						<option value="48">4</option>
+						<option value="60">5</option>
+						<option value="72">6</option>
+						<option value="84">7</option>
+						<option value="96">8</option>
+						<option value="108">9</option>
+						<option value="120">10</option>
+						<option value="132">11</option>
+						<option value="144">12</option>
+						<option value="156">13</option>
+						<option value="168">14</option>
+						<option value="180">15</option>
+						<option value="192">16</option>
+						<option value="204">17</option>
+						<option value="216">18</option>
+						<option value="228">19</option>
+						<option value="240">20</option>
+					</select><br>
+					<input type="checkbox" id="agree-box" class="agree-box" required>
+					<span>By checking this box, I agree to honor my commitment to provide the above amount of eggs at the selected location. I understand that I will receive $4.00 per dozen sold, and that I must compensate Eggschange Co-op in the amount of $.50 per dozen for management fees. If I cannot honor my commitment, I will contact us Eggschange Co-op ASAP. I understand that failing to honor my commitments, or failing to pay the $.50 per dozen co-op fee could terminate my eligibility to participate in this program.</label><br>
+					<button class="exchange">Schedule</button>
+				</form>
+			</div>
+	</div>
+	<div class="sidebar">
+			<h2>Latest News</h2>
+			<h4>Location Suggestions</h4>
+			<p>We have had several requests for additional locations. If you can suggest a location that is not close to one of our current locations, please drop us a line. We would love to talk with you more about possibilities for growth. If you have any other suggestions, or have questions about participating, we would also love to hear from you.</p>
+	</div>
+</div>

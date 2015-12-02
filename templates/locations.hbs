@@ -1,0 +1,24 @@
+<div>
+	<div class="main">
+		<h1 class="locations-head">Eggchange Locations</h1>
+		<div class="location-set">
+			{{#each this}}
+				<div>
+					<div class="media-object">
+						<div class="map" id="map-{{id}}" data-id="{{id}}">{{map}}</div>
+						<div class="location-info">
+							<h4>{{name}}</h4>
+							<span>{{address}}</span><br>
+							<span>Every {{week_day}} From {{event_begin_time}}, Until {{event_end_time}}</span>
+						</div>
+					</div>
+				</div>
+  		{{/each}}
+		</div>
+	</div>
+	<div class="sidebar">
+		<h2>Latest News</h2>
+		<h4>Location Suggestions</h4>
+		<p>We have had several requests for additional locations. If you can suggest a location that is not close to one of our current locations, please drop us a line. We would love to talk with you more about possibilities for growth. If you have any other suggestions, or have questions about participating, we would also love to hear from you.</p>
+	</div>
+</div>

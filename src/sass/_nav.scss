@@ -1,0 +1,141 @@
+//Primary navigation
+
+.hero-footer {
+	background-color: rgba(84,197,226,0.95);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-family: Roboto;
+}
+
+.hero-footer.landing {
+	text-align: center;
+}
+
+.primary-nav {
+	display: none;
+	@include wider-than(600px) {
+		display: inline;
+		font-weight: 800;
+		bottom: 100px;
+		left: 0;
+		right: 0;
+	}
+}
+
+.expand {
+	display: block;
+	position: absolute;
+	animation: slide 240ms ease-out forwards;
+	width: 40%;
+}
+
+@keyframes slide {
+	0% {
+		background-color: transparent;
+		bottom: 0px;
+	}
+	40% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: #c9e0e6;
+		bottom: 49px;
+	}
+}
+
+.expand a {
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	padding: 8px 12px;
+	border-bottom: 1px solid #fff;
+	background-color: #3C91A9;
+}
+
+.expand a:hover {
+	background-color: #3C91A9;
+	color: #B5D7E0;
+}
+
+.expand a:last-child {
+	border-bottom: none;
+}
+
+.primary-nav a {
+	color: #fff;
+	@include wider-than(600px) {
+		display: inline-block;
+		padding: 15px;
+		color: #fff;
+	}
+}
+
+.primary-nav a:hover {
+	background-color: #3C91A9;
+}
+
+// hamburger menu
+
+.hamburger {
+	margin: 8px 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 3px;
+	@include wider-than(600px) {
+		display: none;
+	}
+}
+
+//secondary nav
+
+.secondary-nav {
+	position: absolute;
+	top: 10%;
+	right: 0px;
+	text-align: center;
+}
+
+.secondary-nav a {
+	font-size: .85em;
+	line-height: 60px;
+	color: #fff;
+}
+
+.secondary-nav.landing {
+	@include wider-than(600px) {
+		top: 30%;
+	}
+}
+
+.logout {
+	display: none;
+}
+
+.login, .register, .xchange, .logout {
+	height: 70px;
+	width: 80px;
+}
+
+.login, .logout {
+	background-color: #62DFE0;
+	background-image: url(../images/lock.png);
+	background-repeat: no-repeat;
+	background-position: -5px 10px;
+}
+
+.register {
+	background-color: #71BADB;
+	background-image: url(../images/register.png);
+	background-repeat: no-repeat;
+	background-position: -5px 26px;
+}
+
+.xchange {
+	background-color: MediumOrchid;
+	background-image: url(../images/exchange.png);
+	background-repeat: no-repeat;
+	background-position: 0 30px;
+}
+

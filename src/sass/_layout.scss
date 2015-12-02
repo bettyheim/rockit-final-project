@@ -1,0 +1,84 @@
+// Main page area layout
+
+.page {
+	width: 100%;
+}
+
+.page > div {
+	@include wider-than(600px) {
+		margin: 30px auto;
+		width: calc(100% - 62px);
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.main, .sidebar {
+	padding: 14px;
+}
+
+.main {
+	min-width: 190px;
+	padding-right: 20px;
+	@include wider-than(600px) {
+		flex: 2;
+	}
+}
+
+.sidebar {
+	font-size: 1.2em;
+	padding: 26px;
+	line-height: 1.4em;
+	background-color: #c9e0e6;
+	@include wider-than(600px) {
+		flex: 1;
+	}
+	@include wider-than(1000px) {
+		text-align: justify;
+	}
+}
+
+// footer area layout
+
+.secondary-footer {
+	font-family: Roboto;
+	color: #fff;
+	background-color: #54C5E2;
+	width: 100%;
+}
+
+.secondary-footer a {
+	color: #fff;
+	padding: 5px 0;
+}
+
+.secondary-footer h2 {
+	color: #000;
+	margin-bottom: 14px;
+}
+
+.primary-footer {
+	color: #666;
+	font-size: .9em;
+	background-color: #2e3030;
+	width: 100%;
+}
+
+.secondary-footer > div,
+.primary-footer > div
+{
+	margin: 0 auto;
+	padding: 14px;
+	@include wider-than(600px) {
+		width: calc(100% - 90px);
+	}
+}
+
+.secondary-footer > div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.primary-footer {
+}
+
